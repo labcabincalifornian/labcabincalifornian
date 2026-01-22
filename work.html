@@ -36,15 +36,6 @@
           font-style: italic;
         }
 
-        .clock {
-          position: absolute;
-          bottom: 10px;
-          right: 10px;
-          font-family: arial;
-          font-size: 20px;
-          font-style: italic;
-          color: #898989;
-        }
 
         .decorative-gif {
           position: absolute;
@@ -72,13 +63,6 @@
             font-size: 50px;
           }
 
-          .clock {
-            position: fixed;
-            bottom: 8px;
-            right: 8px;
-            font-size: 11px;
-            z-index: 10;
-          }
           
           .decorative-gif {
             position: static;
@@ -134,11 +118,7 @@
             margin: 15px auto;
           }
 
-          .clock {
-            font-size: 9x;
-            bottom: 5px;
-            right: 5px;
-          }
+    
         }
   </style>
 </head>
@@ -164,23 +144,4 @@
 
   </ul>
 
-    <div class="clock" id="clock">1/21/2026 6:40:29 PM</div>
-  <script>
-    function updateClock() {
-        const clockElement = document.getElementById('clock');
-        const now = new Date();
-        const time = now.toLocaleTimeString();
-        const date = now.toLocaleDateString();
-        clockElement.textContent = `${date} ${time}`;
-    }
 
-   
-    setInterval(updateClock, 1000);
-
-    
-    updateClock();
-</script>
-
-
-
-</body></html>
