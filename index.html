@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html><head>
+  <title> [ labcabincalifornian ] </title>
+  <link rel="icon" type="image/gif" href="folder2.gif">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  </head>
+  <body>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; 
+        margin: 0; 
+        flex-direction: row; 
+        background-color: #ffffff; 
+        overflow: hidden; 
+        position: relative; 
+        font-size: 20px; 
+      }
+  
+      .title { 
+        font-family: Arial;
+        font-size: 48px; 
+        font-style: italic; 
+        text-align: center;
+        margin-right: 50px; 
+      }
+  
+      .bullets {
+          font-style: italic;
+          list-style-type: none; 
+          padding: 0; 
+          text-align: left; 
+          font-size: 24px; 
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+  
+      .bullets li {
+        margin-bottom: 10px;
+        background: none !important;
+      }
+
+      .bullets li:hover {
+        background: #f0f0ff;
+        color: #0077cc;
+        transition: background 0.2s, color 0.2s;
+      }
+  
+      .bullets a {
+        text-decoration: none;
+      }
+      .bullets a:hover {
+        text-decoration: underline;
+      }
+
+      .bullets li a {
+        color: #000 !important;
+        padding: 2px 8px;
+        border-radius: 4px;
+      }
+
+      
+         .squiggly-line {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1200px; 
+        height: 1200px; 
+        transform: translate(-50%, -50%);
+        z-index: -1; 
+      }
+  
+      .squiggly-line path {
+        fill: none;
+        stroke: #000000; 
+        stroke-width: .3; 
+        stroke-linecap: square;
+        opacity: 0.15;
+        stroke-dasharray: 6000; 
+        stroke-dashoffset: 6000; 
+        animation: draw 25s linear infinite; 
+      }
+
+      .clock {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        font-family: arial;
+        font-size: 20px;
+        font-style: italic;
+        color: #898989;
+      }
+
+           @keyframes draw {
+        0% {
+          stroke-dashoffset: 6000; 
+        }
+        70% {
+          stroke-dashoffset: 0; 
+        }
+        71% {
+          stroke-dashoffset: 0; 
+        }
+        100% {
+          stroke-dashoffset: -6000; 
+        }
+      }
+
+      /* mobile responsive styles */
+      @media (max-width: 768px) {
+        body {
+          flex-direction: row;
+          padding: 15px;
+          height: 100vh;
+          overflow: hidden;
+          justify-content: center;
+          align-items: center;
+          font-size: 16px;
+        }
+        
+        .title {
+          font-size: 28px;
+          margin-right: 25px;
+        }
+        
+        .bullets {
+          font-size: 16px;
+          text-align: left;
+        }
+        
+        .bullets li {
+          margin-bottom: 8px;
+          padding: 4px 0;
+        }
+        
+        .bullets li a {
+          padding: 4px 8px;
+          display: inline-block;
+          border-radius: 4px;
+        }
+
+        .squiggly-line {
+          width: 100vw;
+          height: 100vh;
+          opacity: 0.3;
+        }
+
+        .clock {
+          position: fixed;
+          bottom: 8px;
+          right: 8px;
+          font-size: 11px;
+          z-index: 10;
+        }
+        
+        img[src="music.gif"] {
+          transform: scale(0.6) translateY(-20%);
+          left: 120px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        body {
+          font-size: 14px;
+          padding: 10px;
+        }
+        
+        .title {
+          font-size: 22px;
+          margin-right: 15px;
+        }
+        
+        .bullets {
+          font-size: 14px;
+        }
+        
+        .bullets li a {
+          padding: 3px 6px;
+          font-size: 13px;
+        }
+        
+        img[src="music.gif"] {
+          transform: scale(0.4) translateY(-20%);
+          left: 80px;
+        }
+
+        img[src="woman.gif"] {
+          transform: scale(0.4) translateY(-20%);
+          left: 100px;
+        }
+        
+        .squiggly-line {
+          width: 120vw;
+          height: 120vh;
+        }
+
+        .clock {
+            font-size: 9x;
+            bottom: 5px;
+            right: 5px;
+        }
+
+      }
+  </style>
+
+    <svg class="squiggly-line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" preserveAspectRatio="none">
+    
+    <path d="M75,150 
+             Q100,50 150,75 
+             Q200,100 225,150 
+             Q200,175 175,160 
+             Q150,140 125,160 
+             Q100,180 75,150 
+             Q50,120 75,100 
+             Q100,80 125,100 
+             Q150,120 175,100 
+             Q200,80 225,100 
+             Q250,120 225,150 
+             Q200,200 150,225 
+             Q100,250 75,200 
+             Q50,175 75,150 
+             Q100,125 125,140 
+             Q150,160 175,140 
+             Q200,120 225,140 
+             Q250,160 225,200 
+             Q200,240 150,260 
+             Q100,280 75,240 
+             Q50,200 75,150 Z"></path>
+  </svg>
+  
+  <img src="music.gif" alt="Girl" style="position:absolute;left:200px;top:20%;transform:translateY(-20%);z-index:2;">
+  <img src="woman.gif" alt="Girl" style="position:absolute;left:200px;top:24%;transform:translateY(-20%);z-index:2;">
+  
+  
+  <p class="title">[ labcabincalifornian ]</p>
+  <ul class="bullets">
+      <li><a href="info.html">info*</a></li>
+      <li><a href="work.html">personal work*</a></li>
+      <li><a href="journal.html">journal*</a></li>
+      <li><a href="inspo.html">inspo*</a></li>
+  </ul>
+
+  <div class="clock" id="clock">1/21/2026 6:40:29 PM</div>
+  <script>
+    function updateClock() {
+        const clockElement = document.getElementById('clock');
+        const now = new Date();
+        const time = now.toLocaleTimeString();
+        const date = now.toLocaleDateString();
+        clockElement.textContent = `${date} ${time}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>

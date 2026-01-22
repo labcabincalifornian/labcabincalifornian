@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html><head>
+          <title> [ labcabincalifornian ] </title>
+  <link rel="icon" type="image/gif" href="folder2.gif">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                font-family: Arial, sans-serif;
+                min-height: 100vh;
+                padding: 40px;
+                background: white;
+            }
+            
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                gap: 60px;
+                align-items: center;
+                min-height: calc(100vh - 80px);
+            }
+            
+            .gif-section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .gif-section img {
+                max-width: 100%;
+                height: auto;
+                max-height: 300px;
+            }
+
+            .clock {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                font-family: arial;
+                font-size: 20px;
+                font-style: italic;
+                color: #898989;
+              }
+            
+            .text-section {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .bio-text {
+                font-size: 24px;
+                font-style: italic;
+                line-height: 1.4;
+                text-indent: 2em;
+                position: relative;
+            }
+            
+            .clickable-symbol {
+                font-size: 48px;
+                cursor: pointer;
+                position: absolute;
+                right: -60px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            
+            /* mobile responsive styles */
+            @media (max-width: 768px) {
+                body {
+                    padding: 20px;
+                }
+                
+                .container {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                    text-align: left;
+                    align-items: flex-start;
+                    padding-top: 20px;
+                }
+
+                .clock {
+                    position: fixed;
+                    bottom: 5px;
+                    right: 6px;
+                    font-size: 11px;
+                    z-index: 10;
+                }
+                
+                .gif-section {
+                    order: -1;
+                }
+                
+                .gif-section img {
+                    max-height: 200px;
+                }
+                
+                .bio-text {
+                    font-size: 14px;
+                    text-indent: 0;
+                    line-height: 1.3;
+                }
+                
+                .bio-text .clickable-symbol {
+                    display: block;
+                    margin: 10px 0;
+                }
+              
+                }
+                
+                .clickable-symbol {
+                    font-size: 28px;
+                    position: relative;
+                    right: auto;
+                    top: auto;
+                    transform: none;
+                    display: inline;
+                    margin-left: 10px;
+                }
+            
+            
+            @media (max-width: 480px) {
+                body {
+                    padding: 12px;
+                }
+                
+                .bio-text {
+                    font-size: 15px;
+                    line-height: 1.6;
+                }
+                
+                .clickable-symbol {
+                    font-size: 24px;
+                    position: relative;
+                    right: auto;
+                    top: auto;
+                    transform: none;
+                    display: inline;
+                    margin-left: 8px;
+                }
+
+                .clock {
+                    font-size: 9x;
+                    bottom: 5px;
+                    right: 5px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="gif-section">
+               
+
+
+    <a href="index.html">
+    <img src="menu.gif" alt="Description of the image">
+    </a>
+              
+            </div>
+            
+            <div class="text-section">
+                <div class="bio-text">
+
+                    <h1>#</h1>
+                    ‎ ‎ ‎ ‎ ‎this website is inspired by low-tech, static web pages that intend to store information as concisely as possible while also being extremely efficient. these sites are often kept default in terms of design due to the intentional uniformity of html, which is strictly what i used to code this site in. this page will serve as a personal archive for art, music, inspiration, online journal entries as well as other ideas.
+                    <span class="clickable-symbol" onclick="goToLandingPage()"> </span>
+                    
+                    <div class="links">
+
+                    </div>
+                </div>
+                
+                <div class="contact-section">
+                    
+                    <span class="clickable-symbol" onclick="goToLandingPage()"></span>
+                </div>
+            </div>
+        </div>
+        <script>
+            function goToLandingPage() {
+                window.location.href = 'index.html';
+            }
+        </script>
+
+          <div class="clock" id="clock">1/21/2026 6:40:29 PM</div>
+  <script>
+    function updateClock() {
+        const clockElement = document.getElementById('clock');
+        const now = new Date();
+        const time = now.toLocaleTimeString();
+        const date = now.toLocaleDateString();
+        clockElement.textContent = `${date} ${time}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+    
+</body>
+</html>
