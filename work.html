@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> [ labcabincalifornian ] </title>
+  <link rel="icon" type="image/gif" href="folder2.gif">
+  <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #ffffff;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+        ul li a {
+          text-decoration: none;
+          font-style: italic;
+        }
+        ul li a:hover {
+          text-decoration: underline;
+          font-style: italic;
+        }
+        .czech-home {
+          position: absolute;
+          top: 300px;
+          left: 150px;
+          font-size: 60px;
+          color: #000000;
+          text-decoration: none;
+          transition: font-style 0.2s, text-decoration 0.2s;
+        }
+        .czech-home:hover {
+          text-decoration: underline;
+          font-style: italic;
+        }
+
+        .clock {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          font-family: arial;
+          font-size: 20px;
+          font-style: italic;
+          color: #898989;
+        }
+
+        .decorative-gif {
+          position: absolute;
+          top: 50%;
+          right: 260px;
+          transform: translateY(-50%) rotate(-90deg);
+          z-index: 10;
+        }
+
+        /* mobile responsive styles */
+        @media (max-width: 768px) {
+          body {
+            flex-direction: column;
+            padding: 20px;
+            height: auto;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+          }
+          
+          .czech-home {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 50px;
+          }
+
+          .clock {
+            position: fixed;
+            bottom: 8px;
+            right: 8px;
+            font-size: 11px;
+            z-index: 10;
+          }
+          
+          .decorative-gif {
+            position: static;
+            transform: none;
+            display: block;
+            margin: 20px auto;
+            max-width: 150px;
+            height: auto;
+          }
+          
+          ul {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            padding: 0;
+            width: 100%;
+          }
+          
+          ul li {
+            margin-bottom: 8px;
+            padding: 4px 0;
+            line-height: 1.2;
+          }
+          
+          ul li a {
+            padding: 6px 12px;
+            display: inline-block;
+            border-radius: 4px;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .czech-home {
+            font-size: 40px;
+          }
+          
+          ul {
+            font-size: 16px;
+            margin-top: 60px;
+          }
+          
+          ul li {
+            margin-bottom: 8px;
+            padding: 2px 0;
+          }
+          
+          ul li a {
+            padding: 5px 10px;
+          }
+          
+          .decorative-gif {
+            max-width: 120px;
+            margin: 15px auto;
+          }
+
+          .clock {
+            font-size: 9x;
+            bottom: 5px;
+            right: 5px;
+          }
+        }
+  </style>
+</head>
+<body>
+  <a class="czech-home" href="index.html">
+    <img src="menu2.gif" alt="DESCRIPTION">
+  </a>
+  
+  <img src="cat.gif" alt="Decorative gif" class="decorative-gif">
+
+  <ul style="list-style-type: none; padding: 0;">
+    <li><a href="02.html" style="color:#000000;">[ untitled 01/20/2026 ]</a></li>
+    <li><a href="01.html" style="color:#000000;">[ untitled 01/19/2026 ]</a></li>
+    <li><a href="mix04.html" style="color:#000000;">[ 1 hour visual/audio mixtape 03/30/2025 ]</a></li>
+    <li><a href="beats.html" style="color:#000000;">[ sp404sx live set 02/17/2025 ]</a></li>
+    <li><a href="03.html" style="color:#000000;">[ sunnnnnnn MIKE remix album 01/05/2025 ]</a></li>
+    <li><a href="offwhite.html" style="color:#000000;">[ offwhite 12/02/2024 ]</a></li>
+    <li><a href="voirdire.html" style="color:#000000;">[ voir dire remixes 09/04/2023 ]</a></li>
+
+
+
+
+  </ul>
+
+    <div class="clock" id="clock">1/21/2026 6:40:29 PM</div>
+  <script>
+    function updateClock() {
+        const clockElement = document.getElementById('clock');
+        const now = new Date();
+        const time = now.toLocaleTimeString();
+        const date = now.toLocaleDateString();
+        clockElement.textContent = `${date} ${time}`;
+    }
+
+   
+    setInterval(updateClock, 1000);
+
+    
+    updateClock();
+</script>
+
+
+</body></html>
