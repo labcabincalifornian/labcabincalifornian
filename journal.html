@@ -23,26 +23,7 @@
           font-style: italic;
         }
 
- .squiggly-line {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 1200px; 
-        height: 1200px; 
-        transform: translate(-50%, -50%);
-        z-index: -1; 
-      }
-  
-      .squiggly-line path {
-        fill: none;
-        stroke: #000000; 
-        stroke-width: .3; 
-        stroke-linecap: square;
-        opacity: 0.2;
-        stroke-dasharray: 6000; 
-        stroke-dashoffset: 6000; 
-        animation: draw 25s linear infinite; 
-      }
+
 
         .czech-home {
           position: absolute;
@@ -60,20 +41,7 @@
 
        
 
-            @keyframes draw {
-        0% {
-          stroke-dashoffset: 6000; 
-        }
-        70% {
-          stroke-dashoffset: 0; 
-        }
-        71% {
-          stroke-dashoffset: 0; 
-        }
-        100% {
-          stroke-dashoffset: -6000; 
-        }
-      }
+    
 
         .decorative-gif {
           position: absolute;
@@ -120,11 +88,7 @@
             width: 100%;
           }
 
-            .squiggly-line {
-          width: 100vw;
-          height: 100vh;
-          opacity: 0.3;
-        }
+        
           
           ul li {
             margin-bottom: 8px;
@@ -163,39 +127,13 @@
             margin: 15px auto;
           }
 
-          .squiggly-line {
-          width: 120vw;
-          height: 120vh;
-        }
+         
 
         
         }
   </style>
 
-<svg class="squiggly-line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" preserveAspectRatio="none">
-    
-    <path d="M75,150 
-             Q100,50 150,75 
-             Q200,100 225,150 
-             Q200,175 175,160 
-             Q150,140 125,160 
-             Q100,180 75,150 
-             Q50,120 75,100 
-             Q100,80 125,100 
-             Q150,120 175,100 
-             Q200,80 225,100 
-             Q250,120 225,150 
-             Q200,200 150,225 
-             Q100,250 75,200 
-             Q50,175 75,150 
-             Q100,125 125,140 
-             Q150,160 175,140 
-             Q200,120 225,140 
-             Q250,160 225,200 
-             Q200,240 150,260 
-             Q100,280 75,240 
-             Q50,200 75,150 Z"></path>
-  </svg>
+
 
 
 
@@ -223,4 +161,5 @@
 
 
 </body></html>
+
 
